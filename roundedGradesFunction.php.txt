@@ -1,0 +1,21 @@
+<?php
+function gradingStudents($grades) {
+
+    //To loop over all grades
+    for($i = 0; $i < count($grades); $i++){
+        //If the grade greater than 37 and If the difference between the grade and the next
+        //multiple of 5 is 2,
+        // round  up to the next multiple of 5.
+        if ($grades[$i] > 37 && $grades[$i] % 5 == 3) {
+            $grades[$i] += 2;
+        }
+        //If the grade greater than 37 and If the difference between the grade and the next
+        //multiple of 5 is 1,
+        // round  up to the next multiple of 5.
+        if ($grades[$i] > 37 && $grades[$i] % 5 == 4) {
+            $grades[$i] += 1;
+        }
+}
+return $grades;
+}
+?>
